@@ -101,7 +101,7 @@ var work={
 	"title":"Economist",
 	"employer":"Provida",
 	"dates":"2015-2016",
-	"location":"Playas",
+	"location":"Guayaquil",
 	"description":"deliverw"
 }]
 };
