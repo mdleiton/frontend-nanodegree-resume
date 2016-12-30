@@ -86,6 +86,31 @@ function logClicks(x,y) {
 }
 
 $(document).click(function(loc) {
+  var x=loc.pageX;
+  var y=loc.pageY;
+  logClicks(x,y);
+/*mas propiedades
+event.currentTarget---The current DOM element within the event bubbling phase.
+event.data--An optional object of data passed to an event method when the current executing handler is bound.
+event.delegateTarget--The element where the currently-called jQuery event handler was attached.
+event.isDefaultPrevented()--Returns whether event.preventDefault() was ever called on this event object.
+event.isImmediatePropagationStopped()--Returns whether event.stopImmediatePropagation() was ever called on this event object.
+event.isPropagationStopped()--Returns whether event.stopPropagation() was ever called on this event object.
+event.metaKey---Indicates whether the META key was pressed when the event fired.
+event.namespace---The namespace specified when the event was triggered.
+event.pageX--The mouse position relative to the left edge of the document.
+event.pageY--The mouse position relative to the top edge of the document.
+event.preventDefault()--If this method is called, the default action of the event will not be triggered.
+event.relatedTarget--The other DOM element involved in the event, if any.
+event.result--The last value returned by an event handler that was triggered by this event, unless the value was undefined.
+event.stopImmediatePropagation()--Keeps the rest of the handlers from being executed and prevents the event from bubbling up the DOM tree.
+event.stopPropagation()---Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event.
+event.target--The DOM element that initiated the event.
+event.timeStamp---The difference in milliseconds between the time the browser created the event and January 1, 1970.
+event.type--Describes the nature of the event.
+event.which--For key or mouse events, this property indicates the specific key or button that was pressed.
+*/
+
   // your code goes here!
 });
 
@@ -239,11 +264,11 @@ Uncomment the code below when you're ready to implement a Google Map!
 */
 
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
+window.addEventListener('resize', function(e) {
   //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+map.fitBounds(mapBounds);
+});
